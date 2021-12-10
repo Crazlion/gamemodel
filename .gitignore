@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+
+# some not core code，just unreal generate
+buildEscape/.vs/
+buildEscape/DerivedDataCache/
+buildEscape/Saved/
+buildEscape/Intermediate/
+buildEscape/Binaries/
+buildEscape/Content/
+!buildEscape/Content/MyProject/
