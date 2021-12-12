@@ -23,15 +23,15 @@ protected:
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-	// ¿ªÃÅ
+	// è“å›¾äº‹ä»¶å¼€é—¨
 	UFUNCTION(BlueprintImplementableEvent, Category = "Triggerable Door|Door Switch")
 		void OpenDoor();
-	// ¹ØÃÅ
+	// å…³é—¨
 	UFUNCTION(BlueprintImplementableEvent, Category = "Triggerable Door|Door Switch")
 		void CloseDoor();
 
 private:
-	// ´¥·¢Æ÷
+	// å¯¹å¤–å¯ç¼–è¾‘çš„å˜é‡å®  è§¦å‘æ¿
 	UPROPERTY(EditAnywhere) ATriggerBase* pressurePlate=nullptr;
 	UPROPERTY(EditAnywhere) float TriggerMass = 50.f;
 };

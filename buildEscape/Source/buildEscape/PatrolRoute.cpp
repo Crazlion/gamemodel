@@ -1,10 +1,10 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "Grabber.h"
+#include "PatrolRoute.h"
 
 // Sets default values for this component's properties
-UGrabber::UGrabber()
+UPatrolRoute::UPatrolRoute()
 {
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
@@ -15,7 +15,7 @@ UGrabber::UGrabber()
 
 
 // Called when the game starts
-void UGrabber::BeginPlay()
+void UPatrolRoute::BeginPlay()
 {
 	Super::BeginPlay();
 
@@ -25,10 +25,14 @@ void UGrabber::BeginPlay()
 
 
 // Called every frame
-void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+void UPatrolRoute::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 	// ...
 }
 
+TArray<AActor*> UPatrolRoute::GetPatrolPoints() const
+{
+	return PatrolPoints;
+}

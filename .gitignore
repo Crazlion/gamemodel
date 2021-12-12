@@ -33,6 +33,8 @@
 
 # some not core code，just unreal generate
 buildEscape/.vs/
+buildEscape/.idea/
+buildEscape/.vscode/
 buildEscape/DerivedDataCache/
 buildEscape/Saved/
 buildEscape/Intermediate/

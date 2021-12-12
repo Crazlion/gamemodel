@@ -4,17 +4,17 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "Grabber.generated.h"
+#include "PatrolRoute.generated.h"
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class BUILDESCAPE_API UGrabber : public UActorComponent
+class BUILDESCAPE_API UPatrolRoute : public UActorComponent
 {
 	GENERATED_BODY()
 
 public:	
 	// Sets default values for this component's properties
-	UGrabber();
+	UPatrolRoute();
 
 protected:
 	// Called when the game starts
@@ -23,6 +23,13 @@ protected:
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+
+public:
+	TArray<AActor*> GetPatrolPoints() const;
+
+private:
+	UPROPERTY(EditInstanceOnly, Category = "Patrol Route")
+		TArray<AActor*> PatrolPoints;
 
 		
 };

@@ -27,7 +27,7 @@ void UopenDoor::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-	// Èç¹ûÓÐÑ¹Á¦´¥·¢Æ÷
+	// ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	if (pressurePlate) {
 		TArray<AActor*> overlapActors;
 		pressurePlate->GetOverlappingActors(overlapActors);
@@ -37,7 +37,7 @@ void UopenDoor::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 				totalMass = totalMass + actor->FindComponentByClass<UPrimitiveComponent>()->GetMass();
 				UE_LOG(LogTemp, Warning, TEXT("%s on Pressure plate:mass is %f"), *actor->GetName(),actor->FindComponentByClass<UPrimitiveComponent>()->GetMass());
 			}
-			// ´ïµ½´¥·¢ÖØÁ¿£¬Ôò´ò¿ªÃÅ
+			// ï¿½ïµ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			if (totalMass > TriggerMass) {
 				UE_LOG(LogTemp,Log,TEXT("%f:touch to trigger mass"), totalMass)
 				OpenDoor();
